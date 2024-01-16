@@ -1,0 +1,121 @@
+@font-face {
+    font-family: texto;
+    src: url(../font/Orbitron-Regular.ttf);
+}
+
+* {box-sizing: border-box;}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: left;
+    height: 97.9vh;
+}
+
+form {
+    background-color: #060a1a;
+    border-radius: 20px;
+    padding: 0px 35px 35px 35px;
+    border: 0.2rem solid #fff;
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #bc13fe,
+                0 0 0.8rem #bc13fe,
+                0 0 2.8rem #bc13fe,
+                inset 0 0 1.3rem #bc13fe; 
+}
+
+form * {
+    font-family: texto;
+    color: white;
+    border: none;
+}
+
+h2 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow:0 0 7px white,
+                0 0 1px #bc13fe,
+                0 0 1px #bc13fe,
+                0 0 20px #bc13fe,
+                0 0 8px #bc13fe,
+                0 0 8px #bc13fe,
+                0 0 9px #bc13fe,
+                0 0 10px #bc13fe,
+                0 0 15px #bc13fe;
+}
+
+label {
+    display: block;
+    font-size: 1.5rem;
+}
+
+input:not([type="checkbox"]) {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+input:not([type="submit"]):not([type="checkbox"]) {
+    margin-bottom: 30px;
+    transition: 0.5s;
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 10px #CA2B6C,
+                0 0 10px #CA2B6C,
+                0 0 10px #CA2B6C;
+}
+
+input:not([type="submit"]):not([type="checkbox"]):focus {
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 20px #CA2B6C,
+                0 0 20px #CA2B6C,
+                0 0 20px #CA2B6C;
+}
+
+::placeholder {color: #e5e5e5;}
+
+.links {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {text-decoration: none;}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #5D28CE;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 10px #2b50ca,
+                0 0 10px #2b50ca,
+                0 0 10px #2b50ca;
+}
+
+input[type="submit"]:hover {
+    background-color: #441d99;
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 20px #2b50ca,
+                0 0 20px #2b50ca,
+                0 0 20px #2b50ca;
+}
