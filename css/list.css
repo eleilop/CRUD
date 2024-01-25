@@ -1,0 +1,123 @@
+@font-face {
+    font-family: text1;
+    src: url(../font/Orbitron-Regular.ttf);
+}
+
+body {
+    font-family: text1;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: left;
+    height: 95.7vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    padding-bottom: 10%;
+}
+
+h2 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow:0 0 7px white,
+                0 0 1px #2b50ca,
+                0 0 1px #2b50ca,
+                0 0 20px #2b50ca,
+                0 0 8px #2b50ca,
+                0 0 8px #2b50ca,
+                0 0 9px #2b50ca,
+                0 0 10px #2b50ca,
+                0 0 15px #2b50ca;
+}
+
+li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.table-header {
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 1rem #2bca2b,
+                0 0 1rem #2bca2b,
+                0 0 1rem #2bca2b,
+                0 0 1rem #2bca2b;
+    background-color: #6574ff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.table-row {
+    color: white;
+    background-color: #8b98ff;
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 0.5rem #2b50ca,
+                0 0 0.5rem #2b50ca,
+                0 0 0.5rem #2b50ca,
+                0 0 0.5rem #2b50ca;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.table-row:hover {
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 1rem #2b50ca,
+                0 0 1rem #2b50ca,
+                0 0 1rem #2b50ca,
+                0 0 1rem #2b50ca;
+}
+
+.col-1 {flex-basis: 10%;}
+
+.col-2 {flex-basis: 25%;}
+
+.col-3 {flex-basis: 15%;}
+
+.col-4 {flex-basis: 15%;}
+
+.col-5 {flex-basis: 15%;}
+
+.col-6 {flex-basis: 15%;}
+
+.col-7 {flex-basis: 5%;}
+
+.fa {font-size: 1.3rem!important;}
+
+.fa-trash {color: red;}
+
+.fa-pencil-square {color: yellow;}
+
+.fa-plus-circle {color: rgb(0, 255, 0);}
+
+i {cursor: pointer;}
+
+@media all and (max-width: 1000px) {
+    body {height: 135vh;}
+    .table-header {display: none;}
+    li {display: block;}
+    .col {flex-basis: 100%;}
+    .col {
+        display: flex;
+        padding: 10px 0;
+        &:before {
+            color: #6C7A89;
+            padding-right: 10px;
+            content: attr(data-label);
+            flex-basis: 50%;
+            text-align: right;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 @font-face {
-    font-family: texto;
+    font-family: text1;
     src: url(../font/Orbitron-Regular.ttf);
 }
 
@@ -13,7 +13,7 @@ body {
     background-image: url(../img/background.jpg);
     background-size: cover;
     background-position: left;
-    height: 97.9vh;
+    height: 98.3vh;
 }
 
 form {
@@ -30,7 +30,7 @@ form {
 }
 
 form * {
-    font-family: texto;
+    font-family: text1;
     color: white;
     border: none;
 }

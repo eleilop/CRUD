@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Login</title>
+    <title>Neon Insert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/form.css">
@@ -11,7 +11,10 @@
 </head>
 <body>
     <form action="" method="post">
-        <h2>LOGIN HERE</h2>
+        <h2>CREATE<br>ACCOUNT</h2>
+
+        <label for="email">EMAIL</label>
+        <input type="email" name="email" id="email" required>
 
         <label for="username">USERNAME</label>
         <input type="text" name="username" id="username" required>
@@ -19,7 +22,13 @@
         <label for="password">PASSWORD</label>
         <input type="password" name="password" id="password" required>
 
-        <input type="submit" value="LOGIN">
+        <label for="name">NAME</label>
+        <input type="text" name="name" id="name">
+
+        <label for="name">LAST NAME</label>
+        <input type="text" name="name" id="name">
+
+        <input type="submit" value="CREATE">
     </form>
 </body>
 </html>
