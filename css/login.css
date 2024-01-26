@@ -13,11 +13,10 @@ body {
     background-image: url(../img/background.jpg);
     background-size: cover;
     background-position: left;
+    height: 97.8vh;
 }
 
 form {
-    margin-top: 2%;
-    margin-bottom: 2%;
     background-color: #060a1a;
     border-radius: 20px;
     padding: 0px 35px 35px 35px;
