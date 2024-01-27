@@ -1,8 +1,14 @@
+/*************************************************************/
+/*      Style for insercion.html and modificacion.html       */
+/*************************************************************/
+
+/*************************** FONTS ***************************/
 @font-face {
     font-family: text1;
     src: url(../font/Orbitron-Regular.ttf);
 }
 
+/************************** GENERAL **************************/
 * {box-sizing: border-box;}
 
 body {
@@ -15,6 +21,7 @@ body {
     background-position: left;
 }
 
+/*************************** FORM ****************************/
 form {
     margin-top: 2%;
     margin-bottom: 2%;

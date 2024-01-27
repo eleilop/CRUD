@@ -1,8 +1,15 @@
+/*************************************************************/
+/*                  Style for listado.html                   */
+/*************************************************************/
+
+
+/*************************** FONTS ***************************/
 @font-face {
     font-family: text1;
     src: url(../font/Orbitron-Regular.ttf);
 }
 
+/************************** GENERAL **************************/
 body {
     font-family: text1;
     background-image: url(../img/form.jpg);
@@ -21,6 +28,7 @@ body {
     padding-bottom: 10%;
 }
 
+/*************************** TABLE ****************************/
 h2 {
     color: white;
     font-size: 2.5rem;
@@ -114,6 +122,7 @@ li {
 
 i {cursor: pointer;}
 
+/*************************** MEDIA QUERIES ****************************/
 @media all and (max-width: 1000px) {
     body {height: 135vh;}
     .table-header {display: none;}
