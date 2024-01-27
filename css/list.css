@@ -95,13 +95,22 @@ li {
 
 .col-7 {flex-basis: 5%;}
 
-.fa {font-size: 1.3rem!important;}
+.fa {
+    font-size: 1.3rem!important;
+    transition: 0.3s;
+}
 
 .fa-trash {color: red;}
 
+.fa-trash:hover {color: rgb(197, 0, 0);}
+
 .fa-pencil-square {color: yellow;}
 
+.fa-pencil-square:hover {color: rgb(197, 197, 0);}
+
 .fa-plus-circle {color: rgb(0, 255, 0);}
+
+.fa-plus-circle:hover {color: rgb(0, 197, 0);}
 
 i {cursor: pointer;}
 
