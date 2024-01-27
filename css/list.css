@@ -5,10 +5,11 @@
 
 body {
     font-family: text1;
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/form.jpg);
     background-size: cover;
-    background-position: left;
-    height: 95.7vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: #35277C;
 }
 
 .container {
