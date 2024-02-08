@@ -17,6 +17,7 @@ body {
     background-repeat: no-repeat;
     height: 93vh;
     background-color: #35277C;
+    margin-right: 50px;
 }
 
 .container {
@@ -33,6 +34,7 @@ h2 {
     color: white;
     font-size: 2.5rem;
     text-align: center;
+    padding-left: 35px;
     text-shadow:0 0 7px white,
                 0 0 1px #2b50ca,
                 0 0 1px #2b50ca,
@@ -106,6 +108,8 @@ li {
 .fa {
     font-size: 1.3rem!important;
     transition: 0.3s;
+    padding-right: 3px;
+    cursor: pointer;
 }
 
 .fa-trash {color: red;}
@@ -119,8 +123,6 @@ li {
 .fa-plus-circle {color: rgb(0, 255, 0);}
 
 .fa-plus-circle:hover {color: rgb(0, 197, 0);}
-
-i {cursor: pointer;}
 
 /*************************** MEDIA QUERIES ****************************/
 @media all and (max-width: 1000px) {
