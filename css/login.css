@@ -13,13 +13,12 @@
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url(../img/form.jpg);
     background-size: cover;
     background-position: left;
-    height: 97.8vh;
+    height: 98.3vh;
 }
 
 /*************************** FORM ****************************/
@@ -62,7 +61,7 @@ label {
     font-size: 1.5rem;
 }
 
-input:not([type="checkbox"]) {
+input {
     display: block;
     height: 50px;
     width: 100%;
@@ -74,8 +73,7 @@ input:not([type="checkbox"]) {
     font-weight: 300;
 }
 
-input:not([type="submit"]):not([type="checkbox"]) {
-    margin-bottom: 30px;
+input:not([type="submit"]) {
     transition: 0.5s;
     box-shadow: 0 0 .2rem #fff,
                 0 0 .2rem #fff,
@@ -84,7 +82,7 @@ input:not([type="submit"]):not([type="checkbox"]) {
                 0 0 10px #CA2B6C;
 }
 
-input:not([type="submit"]):not([type="checkbox"]):focus {
+input:not([type="submit"]):focus {
     box-shadow: 0 0 .2rem #fff,
                 0 0 .2rem #fff,
                 0 0 20px #CA2B6C,
@@ -92,15 +90,12 @@ input:not([type="submit"]):not([type="checkbox"]):focus {
                 0 0 20px #CA2B6C;
 }
 
-::placeholder {color: #e5e5e5;}
-
-.links {
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
+#usernameHelp, #passwordHelp {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: red;
+    visibility: hidden;
 }
-
-a {text-decoration: none;}
 
 input[type="submit"] {
     width: 100%;

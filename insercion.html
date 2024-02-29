@@ -10,28 +10,54 @@
     <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
 </head>
 <body>
-    <form action="" method="post">
+    <form onsubmit="return formValidation()" action="" method="post">
         <!------------ TITLE ------------>
-        <h2>CREATE<br>ACCOUNT</h2>
+        <h2>CREATE TEACHER</h2>
 
         <!------------ LABELS AND INPUTS ------------>
-        <label for="email">EMAIL</label>
-        <input type="email" name="email" id="email" required>
+        <label for="firstName">FIRST NAME</label><br>
+        <input onchange="hideMessage('firstName')" type="text" name="firstName" id="firstName"><br><br>
+        <div id="firstNameHelp" class="help">First name must not be empty</div><br>
 
-        <label for="username">USERNAME</label>
-        <input type="text" name="username" id="username" required>
+        <label for="lastName">LAST NAME</label><br>
+        <input onchange="hideMessage('lastName')" type="text" name="lastName" id="lastName"><br><br>
+        <div id="lastNameHelp" class="help">Last name must contain 2-20 characters</div><br>
 
-        <label for="password">PASSWORD</label>
-        <input type="password" name="password" id="password" required>
+        <label for="email">EMAIL</label><br>
+        <input onchange="hideMessage('email')" type="text" name="email" id="email"><br><br>
+        <div id="emailHelp" class="help">Email must be valid</div><br>
 
-        <label for="name">NAME</label>
-        <input type="text" name="name" id="name">
+        <label for="phone">PHONE</label><br>
+        <input onchange="hideMessage('phone')" type="text" name="phone" id="phone"><br><br>
+        <div id="phoneHelp" class="help">Phone must be 9 digits</div><br>
 
-        <label for="name">LAST NAME</label>
-        <input type="text" name="name" id="name">
+        <label for="subject">SUBJECT</label><br>
+        <select onchange="hideMessage('subject')" name="subject" id="subject">
+            <option value="0">--Select a subject</option>
+            <option value="1">Programming</option>
+            <option value="2">Databases</option>
+            <option value="3">Markup Languages</option>
+            <option value="4">Informatic Systems</option>
+            <option value="5">Development Environments</option>
+        </select><br><br>
+        <div id="subjectHelp" class="help">Subject must be selected</div><br>
+
+        <label for="hours">HOURS</label><br>
+        <input onchange="hideMessage('hours')" type="number" name="hours" id="hours"><br><br>
+        <div id="hoursHelp" class="help">Hours must be between 40-48 hours</div><br>
+
+        <label for="gender">GENDER</label><br>
+        <input type="radio" name="gender" id="male" value="male"><label class="radio" for="male"> Male</label>
+        <input type="radio" name="gender" id="female" value="female"><label class="radio" for="female"> Female</label><br>
+        <div id="genderHelp" class="help">Gender must be selected</div><br>
+
+        <input onchange="hideMessage('terms')" type="checkbox" name="terms" id="terms">
+        <label for="terms" id="terms_label">Terms of Use Agreement</label>
+        <div id="termsHelp" class="help">You must accept the terms</div><br>
 
         <!------------ SUBMIT ------------>
         <input type="submit" value="CREATE">
     </form>
+    <script src="./js/validation.js"></script>
 </body>
 </html>

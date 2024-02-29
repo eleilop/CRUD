@@ -10,19 +10,22 @@
     <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
 </head>
 <body>
-    <form action="" method="post">
+    <form onsubmit="return loginValidation()" action="" method="post">
         <!------------ TITLE ------------>
         <h2>LOGIN HERE</h2>
 
         <!------------ LABELS AND INPUTS ------------>
         <label for="username">USERNAME</label>
-        <input type="text" name="username" id="username" required>
+        <input onchange="hideMessage('username')" type="text" name="username" id="username">
+        <div id="usernameHelp">Username must contain 8-12 characters</div>
 
         <label for="password">PASSWORD</label>
-        <input type="password" name="password" id="password" required>
+        <input onchange="hideMessage('password')" type="password" name="password" id="password">
+        <div id="passwordHelp">Password must contain 8-15 characters,<br>uppercase, lowercase and digits</div>
 
         <!------------ SUBMIT ------------>
         <input type="submit" value="LOGIN">
     </form>
+    <script src="./js/validation.js"></script>
 </body>
 </html>

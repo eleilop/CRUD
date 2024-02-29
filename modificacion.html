@@ -12,26 +12,51 @@
 <body>
     <form action="" method="post">
         <!------------ TITLE ------------>
-        <h2>EDIT<br>ACCOUNT</h2>
+        <h2>MODIFY TEACHER</h2>
 
         <!------------ LABELS AND INPUTS ------------>
-        <label for="email">EMAIL</label>
-        <input type="email" name="email" id="email" value="example@gmail.com" required>
+        <label for="firstName">FIRST NAME</label><br>
+        <input type="text" name="firstName" id="firstName" value="Alejandro"><br><br>
+        <div id="firstNameHelp" class="help">First name must not be empty</div><br>
 
-        <label for="username">USERNAME</label>
-        <input type="text" name="username" id="username" value="example" required>
+        <label for="lastName">LAST NAME</label><br>
+        <input type="text" name="lastName" id="lastName" value="Rodríguez"><br><br>
+        <div id="lastNameHelp" class="help">Last name must contain 2-20 characters</div><br>
 
-        <label for="password">PASSWORD</label>
-        <input type="password" name="password" id="password" value="example" required>
+        <label for="email">EMAIL</label><br>
+        <input type="text" name="email" id="email" value="alejandro.rodriguez@example.com"><br><br>
+        <div id="emailHelp" class="help">Email must be valid</div><br>
 
-        <label for="name">NAME</label>
-        <input type="text" name="name" id="name" value="example">
+        <label for="phone">PHONE</label><br>
+        <input type="text" name="phone" id="phone" value="123456789"><br><br>
+        <div id="phoneHelp" class="help">Phone must be 9 digits</div><br>
 
-        <label for="name">LAST NAME</label>
-        <input type="text" name="name" id="name" value="example">
+        <label for="subject">SUBJECT</label><br>
+        <select name="subject" id="subject">
+            <option value="0">--Select a subject</option>
+            <option value="1" selected>Programming</option>
+            <option value="2">Databases</option>
+            <option value="3">Markup Languages</option>
+            <option value="4">Informatic Systems</option>
+            <option value="5">Development Environments</option>
+        </select><br><br>
+        <div id="subjectHelp" class="help">Subject must be selected</div><br>
+
+        <label for="hours">HOURS</label><br>
+        <input type="number" name="hours" id="hours" min="40" max="48" value="20"><br><br>
+        <div id="hoursHelp" class="help">Hours must be between 40-48 hours</div><br>
+
+        <label for="gender">GENDER</label><br>
+        <input type="radio" name="gender" id="male" value="male" checked><label class="radio" for="male"> Male</label>
+        <input type="radio" name="gender" id="female" value="female"><label class="radio" for="female"> Female</label><br>
+        <div id="genderHelp" class="help">Gender must be selected</div><br>
+
+        <input type="checkbox" name="terms" id="terms" checked>
+        <label for="terms" id="terms_label">Terms of Use Agreement</label>
+        <div id="termsHelp" class="help">You must accept the terms</div><br>
 
         <!------------ SUBMIT ------------>
-        <input type="submit" value="CONFIRM CHANGES">
+        <input type="submit" value="SUBMIT">
     </form>
 </body>
 </html>
