@@ -41,6 +41,7 @@ form * {
     border: none;
 }
 
+/***** TITLE *****/
 h2 {
     color: white;
     font-size: 2.5rem;
@@ -56,11 +57,13 @@ h2 {
                 0 0 15px #bc13fe;
 }
 
+/***** LABELS *****/
 label {
     display: block;
     font-size: 1.5rem;
 }
 
+/***** INPUTS *****/
 input {
     display: block;
     height: 50px;
@@ -90,6 +93,7 @@ input:not([type="submit"]):focus {
                 0 0 20px #CA2B6C;
 }
 
+/***** HELP MESSAGE *****/
 #usernameHelp, #passwordHelp {
     margin-top: 15px;
     margin-bottom: 20px;
@@ -97,6 +101,7 @@ input:not([type="submit"]):focus {
     visibility: hidden;
 }
 
+/***** SUBMIT *****/
 input[type="submit"] {
     width: 100%;
     background-color: #5D28CE;
