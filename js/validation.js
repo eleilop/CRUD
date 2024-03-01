@@ -4,7 +4,6 @@
  */
 function showMessage(id) {
     document.getElementById(''+id+'Help').style.visibility='visible';
-    document.getElementById(''+id).style.borderColor='red';
 }
 
 /**
@@ -13,7 +12,6 @@ function showMessage(id) {
  */
 function hideMessage(id) {
     document.getElementById(''+id+'Help').style.visibility='hidden';
-    document.getElementById(''+id).style.borderColor='';
 }
 
 /**
@@ -155,10 +153,10 @@ function hoursValidation() {
  * @returns TRUE: Gender is checked | FALSE: Gender is not checked
  */
 function genderValidation() {
-    let male = document.getElementById('male');
-    let female = document.getElementById('female');
+    let male = document.getElementById('male').checked;
+    let female = document.getElementById('female').checked;
 
-    if (!male.checked && !female.checked) {
+    if (!male && !female) {
         showMessage('gender');
         return false;
     } else {
@@ -174,7 +172,7 @@ function genderValidation() {
 function termsValidation() {
     let terms = document.getElementById('terms');
 
-    if (!conditions.checked) {
+    if (!terms.checked) {
         showMessage('terms');
         return false;
     } else {
@@ -212,11 +210,18 @@ function formValidation() {
     let test4 = phoneValidation();
     let test5 = subjectValidation();
     let test6 = hoursValidation();
-    /*let test7 = genderValidation();*/
+    let test7 = genderValidation();
     let test8 = termsValidation();
 
-    if (test1 && test2 && test3 && test4 && test5 && test6 && /*test7 &&*/ test8)
+    if (test1 && test2 && test3 && test4 && test5 && test6 && test7 && test8)
         isValid = true;
 
     return isValid;
+}
+
+/**
+ * Deletes a teacher from listado.html
+ */
+function deleteTeacher() {
+    confirm('Are you sure you want to delete this teacher?');
 }

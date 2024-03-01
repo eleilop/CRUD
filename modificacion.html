@@ -4,35 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neon Edit</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
 </head>
 <body>
-    <form action="" method="post">
+    <form onsubmit="return formValidation()" action="" method="post">
         <!------------ TITLE ------------>
         <h2>MODIFY TEACHER</h2>
 
         <!------------ LABELS AND INPUTS ------------>
+        <!-- FIRST NAME -->
         <label for="firstName">FIRST NAME</label><br>
-        <input type="text" name="firstName" id="firstName" value="Alejandro"><br><br>
-        <div id="firstNameHelp" class="help">First name must not be empty</div><br>
+        <input onchange="hideMessage('firstName')" type="text" name="firstName" id="firstName" value="Alejandro"><br><br>
+        <div id="firstNameHelp" class="help">First name must be valid</div><br>
 
+        <!-- LAST NAME -->
         <label for="lastName">LAST NAME</label><br>
-        <input type="text" name="lastName" id="lastName" value="Rodríguez"><br><br>
-        <div id="lastNameHelp" class="help">Last name must contain 2-20 characters</div><br>
+        <input onchange="hideMessage('lastName')" type="text" name="lastName" id="lastName" value="Rodríguez"><br><br>
+        <div id="lastNameHelp" class="help">Last name must be valid</div><br>
 
+        <!-- EMAIL -->
         <label for="email">EMAIL</label><br>
-        <input type="text" name="email" id="email" value="alejandro.rodriguez@example.com"><br><br>
+        <input onchange="hideMessage('email')" type="text" name="email" id="email" value="alejandro.rodriguez@example.com"><br><br>
         <div id="emailHelp" class="help">Email must be valid</div><br>
 
+        <!-- PHONE -->
         <label for="phone">PHONE</label><br>
-        <input type="text" name="phone" id="phone" value="123456789"><br><br>
+        <input onchange="hideMessage('phone')" type="text" name="phone" id="phone" value="123456789"><br><br>
         <div id="phoneHelp" class="help">Phone must be 9 digits</div><br>
 
+        <!-- SUBJECT -->
         <label for="subject">SUBJECT</label><br>
-        <select name="subject" id="subject">
+        <select onchange="hideMessage('subject')" name="subject" id="subject">
             <option value="0">--Select a subject</option>
             <option value="1" selected>Programming</option>
             <option value="2">Databases</option>
@@ -42,21 +45,26 @@
         </select><br><br>
         <div id="subjectHelp" class="help">Subject must be selected</div><br>
 
+        <!-- HOURS -->
         <label for="hours">HOURS</label><br>
-        <input type="number" name="hours" id="hours" min="40" max="48" value="20"><br><br>
+        <input onchange="hideMessage('hours')" type="number" name="hours" id="hours" value="41"><br><br>
         <div id="hoursHelp" class="help">Hours must be between 40-48 hours</div><br>
 
-        <label for="gender">GENDER</label><br>
-        <input type="radio" name="gender" id="male" value="male" checked><label class="radio" for="male"> Male</label>
-        <input type="radio" name="gender" id="female" value="female"><label class="radio" for="female"> Female</label><br>
+        <!-- GENDER -->
+        <label>GENDER</label><br>
+        <input onchange="hideMessage('gender')" type="radio" name="gender" id="male" value="male" checked><label class="radio" for="male"> Male</label>
+        <input onchange="hideMessage('gender')" type="radio" name="gender" id="female" value="female"><label class="radio" for="female"> Female</label><br>
         <div id="genderHelp" class="help">Gender must be selected</div><br>
 
-        <input type="checkbox" name="terms" id="terms" checked>
+        <!-- TERMS -->
+        <input onchange="hideMessage('terms')" type="checkbox" name="terms" id="terms" checked>
         <label for="terms" id="terms_label">Terms of Use Agreement</label>
         <div id="termsHelp" class="help">You must accept the terms</div><br>
 
         <!------------ SUBMIT ------------>
-        <input type="submit" value="SUBMIT">
+        <input type="submit" value="CREATE">
     </form>
+    <!------------ JAVASCRIPT ------------>
+    <script src="./js/validation.js"></script>
 </body>
 </html>

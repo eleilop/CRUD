@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neon Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
 </head>
@@ -15,10 +13,12 @@
         <h2>LOGIN HERE</h2>
 
         <!------------ LABELS AND INPUTS ------------>
+        <!-- USERNAME -->
         <label for="username">USERNAME</label>
         <input onchange="hideMessage('username')" type="text" name="username" id="username">
         <div id="usernameHelp">Username must contain 8-12 characters</div>
 
+        <!-- PASSWORD -->
         <label for="password">PASSWORD</label>
         <input onchange="hideMessage('password')" type="password" name="password" id="password">
         <div id="passwordHelp">Password must contain 8-15 characters,<br>uppercase, lowercase and digits</div>
@@ -26,6 +26,7 @@
         <!------------ SUBMIT ------------>
         <input type="submit" value="LOGIN">
     </form>
+    <!------------ JAVASCRIPT ------------>
     <script src="./js/validation.js"></script>
 </body>
 </html>
